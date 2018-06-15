@@ -2,32 +2,53 @@
 
 <project name="${artifactId}" xmlns="http://maven.apache.org/DECORATION/1.8.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
-  <bannerLeft>
-    <name>${artifactId}</name>
-    <src>https://maven.apache.org/images/apache-maven-project.png</src>
-    <href>https://www.apache.org/</href>
-  </bannerLeft>
 
-  <bannerRight>
-    <src>https://maven.apache.org/images/maven-logo-black-on-white.png</src>
-    <href>https://maven.apache.org/</href>
-  </bannerRight>
 
+  <publishDate position="right" format="yyyy-MM-dd" />
+  <version position="left" />
+  <poweredBy>
+    <logo name="Maven" href="http://maven.apache.org/"
+          img="http://maven.apache.org/images/logos/build-by-maven-black.png" />
+  </poweredBy>
+
+  <!--??????-->
   <skin>
     <groupId>org.apache.maven.skins</groupId>
-    <artifactId>maven-fluido-skin</artifactId>
-    <version>1.7</version>
+    <artifactId>maven-classic-skin</artifactId>
+    <version>1.0</version>
   </skin>
 
   <body>
-    <links>
-      <item name="Maven" href="https://maven.apache.org/"/>
-    </links>
-
+    <menu name="${project.name}">
+      <item name="Introduction" href="index.html"/>
+      <item name="Features" href="features.html"/>
+      <item name="Installation" href="installation.html"/>
+      <item name="Configuration" href="configuration.html"/>
+      <item name="FAQ" href="faq.html"/>
+      <!--&lt;!&ndash;????&ndash;&gt;-->
+      <!--<item name="Developer Resources" href="/developer/index.html" collapse="true">-->
+        <!--<item name="System Architecture" href="/developer/architecture.html"/>-->
+        <!--<item name="Embedder's Guide" href="/developer/embedding.html"/>-->
+      <!--</item>-->
+    </menu>
     <menu name="Documentation">
-      <!--<item name="Xdoc Example" href="xdoc.html"/>-->
+      <item name="Standard Usage" href="usage.html" />
+      <item name="Continuum Integration" href="#.html" />
     </menu>
 
-    <menu ref="reports" />
+    <!--<menu name="Project Documentation">-->
+      <!--<item name="Project Information" href="project-info.html" />-->
+      <!--<item name="Project Reports" href="project-reports.html" />-->
+    <!--</menu>-->
+    <menu ref="reports"/>
   </body>
+
+
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>true</topBarEnabled>
+      <sideBarEnabled>true</sideBarEnabled>
+    </fluidoSkin>
+  </custom>
+
 </project>
